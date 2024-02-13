@@ -291,3 +291,97 @@ try {
     console.error("palindromeOrIsogram failed test case 4, here is the error: ");
     console.error(error.message);
 }
+
+try {
+    const arrayOfObjects1 = [ { a: 12, b: 8, c: 15, d: 12, e: 10, f: 15 }, { x: 5, y: 10, z: 15 }, { p: -2, q: 0, r: 5, s: 3.5 }, ]; 
+    const statsResult1 = objectStats(arrayOfObjects1); 
+    // Expected Result:{ mean: 8.346, median: 10, mode: 15, range: 17, minimum: -2, maximum: 15, count: 13, sum: 108.5 }
+    console.log("objectStats passed test case 1, here is the result: ");
+    console.log(statsResult1);
+} catch (error) {
+    console.error("objectStats failed test case 1, here is the error: ");
+    console.error(error);
+}
+
+try {
+    const arrayOfObjects2 = [ { p: 10, q: 15, r: 20 }, { x: -5, y: 8, z: 10 }, { a: 5, b: 5, c: 5 }, ]; 
+    const statsResult2 = objectStats(arrayOfObjects2); 
+    // Expected Result:{ mean: 8.111, median: 8, mode: 5, range: 25, minimum: -5, maximum: 20, count: 9, sum: 73 }
+    console.log("objectStats passed test case 2, here is the result: ");
+    console.log(statsResult2);
+} catch (error) {
+    console.error("objectStats failed test case 2, here is the error: ");
+    console.error(error);
+}
+
+try {
+    const arrayOfObjects3 = [ { alpha: 3.5, beta: 7.2, gamma: 4.8 }, { x: 0, y: 0, z: 0 }, { p: -2, q: -8, r: -5 }, ]; 
+    const statsResult3 = objectStats(arrayOfObjects3); 
+    // Expected Result: { mean: 0.056, median: 0, mode: 0, range: 15.2, minimum: -8, maximum: 7.2, count: 9, sum: 0.5 }
+    console.log("objectStats passed test case 3, here is the result: ");
+    console.log(statsResult3);
+} catch (error) {
+    console.error("objectStats failed test case 3, here is the error: ");
+    console.error(error);
+}
+
+try {
+    const object1 = { a: 3, b: 7, c: "5" };
+    const object2 = { b: 2, c: "8", d: "4" };
+    const object3 = { a: 5, c: 3, e: 6 };
+    const resultMergedAndSummed = mergeAndSumValues(object1, object2, object3);
+    console.log("resultMergedAndSummed passed test case 1, here is the result: ");
+    console.log(resultMergedAndSummed);
+// Expected Result: { a: 8, b: 9, c: 16, d: 4, e: 6 }
+} catch (error) {
+    console.error("resultMergedAndSummed failed test case 1, here is the error: ");
+    console.error(error);
+}
+
+try {
+    const obj1 = { a: 1, b: 2, c: 3 }; 
+    const obj2 = { b: 3, c: 4, d: 5 }; 
+    const obj3 = { a: 2, c: 1, e: 6 }; 
+    const result1 = mergeAndSumValues(obj1, obj2, obj3); // Expected Result: { a: 3, b: 5, c: 8, d: 5, e: 6 }
+    console.log("resultMergedAndSummed passed test case 2, here is the result: ");
+    console.log(result1);
+} catch (error) {
+    console.error("resultMergedAndSummed failed test case 2, here is the error: ");
+    console.error(error);
+}
+
+try {
+    const obj4 = { x: 10, y: 5, z: 3 }; 
+    const obj5 = { x: 5, y: 2, z: 7 }; 
+    const obj6 = { x: 3, y: 8, z: 1 }; 
+    const result2 = mergeAndSumValues(obj4, obj5, obj6); // Expected Result: { x: 18, y: 15, z: 11 }
+    console.log("resultMergedAndSummed passed test case 3, here is the result: ");
+    console.log(result2);
+} catch (error) {
+    console.error("resultMergedAndSummed failed test case 3, here is the error: ");
+    console.error(error);
+}
+
+try {
+    const obj7 = { one: 15, two: 20 }; 
+    const obj8 = { one: 5, two: 10 }; 
+    const obj9 = { two: 5, three: 8 }; 
+    const result3 = mergeAndSumValues(obj7, obj8, obj9); // Expected Result: { one: 20, two: 35, three: 8 }
+    console.log("resultMergedAndSummed passed test case 4, here is the result: ");
+    console.log(result3);
+} catch (error) {
+    console.error("resultMergedAndSummed failed test case 4, here is the error: ");
+    console.error(error);
+}
+
+try {
+    const obj10 = { a: 1, b: "2", c: 3 }; 
+    const obj11 = { b: 3, c: 4, d: 5 }; 
+    const obj12 = { a: 2, c: "hello", e: 6 }; 
+    const result4 = mergeAndSumValues(obj10, obj11, obj12); // Throws an error
+    console.log("resultMergedAndSummed failed test case 5, here is the result: ");
+    console.log(result4);
+} catch (error) {
+    console.error("resultMergedAndSummed passed test case 5, here is the error: ");
+    console.error(error.message);
+}
